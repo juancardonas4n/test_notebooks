@@ -38,12 +38,12 @@ JUPYTER_CONFIG_DIR=$(jupyter --config-dir)
 mkdir -p $JUPYTER_CONFIG_DIR/nbconfig/
 cat > $JUPYTER_CONFIG_DIR/nbconfig/notebook.json <<- EOF
 {
-  "CodeCell": {
-    "cm_config": {
-      "indentUnit": 2
-    }
+  "Notebook": {
+    "Header": true
   },
   "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
     "exercise2/main": true
   }
 }
