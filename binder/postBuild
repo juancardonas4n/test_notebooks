@@ -9,7 +9,7 @@ chmod +x coursier
 SCALA_VERSION=2.13.3
 ALMOND_VERSION=0.10.9
 
-# Install almond for Scala 2.12
+# Install almond for Scala 2.13
 ./coursier launch --fork "almond:$ALMOND_VERSION" --scala $SCALA_VERSION -- \
   --install \
   --id scala213 \
@@ -38,12 +38,12 @@ JUPYTER_CONFIG_DIR=$(jupyter --config-dir)
 mkdir -p $JUPYTER_CONFIG_DIR/nbconfig/
 cat > $JUPYTER_CONFIG_DIR/nbconfig/notebook.json <<- EOF
 {
-  "Notebook": {
-    "Header": true
+  "CodeCell": {
+    "cm_config": {
+      "indentUnit": 2
+    }
   },
   "load_extensions": {
-    "nbextensions_configurator/config_menu/main": true,
-    "contrib_nbextensions_help_item/main": true,
     "exercise2/main": true
   }
 }
