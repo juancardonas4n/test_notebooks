@@ -1,6 +1,6 @@
 notebook==6.4.8
 jupyter-client==7.1.2
-jupyter-console==6.4.4
+# jupyter-console==6.4.4
 jupyter-core==4.9.1
 jupyter-contrib-core==0.3.3
 jupyter-contrib-nbextensions==0.5.1
